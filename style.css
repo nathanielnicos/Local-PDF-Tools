@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #666;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    border: 2px dashed #bbb;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#file-input {
+    margin-top: 10px;
+}
+
+#process-btn {
+    width: 100%;
+    padding: 14px;
+    cursor: pointer;
+}
+
+#result-area {
+    margin-top: 20px;
+}
+
+.drag-active {
+    border: 2px dashed #007bff;
+    background-color: #f0f8ff;
+}
+
+#file-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  width: 100%;
+}
+
+#file-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+#file-list li span.filename {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#file-list li .buttons {
+  display: flex;
+  gap: 4px;
+}
+
+#file-list li button {
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px;
+}
+
+#file-list li button:hover {
+  background: #e6e6e6;
+}
+
+#file-list li .buttons button {
+  padding: 2px 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px;
+}
+
+#file-list li .buttons button:hover {
+  background: #e6e6e6;
+}
+
+#file-list li .buttons button:last-child {
+  color: red; /* tombol X berwarna merah */
+}

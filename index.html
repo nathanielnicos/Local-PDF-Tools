@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local PDF Tools</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Local PDF Tools</h1>
+        <p class="subtitle">
+            Compress and convert PDF files directly on your device.
+            No uploads. No tracking.
+        </p>
+
+        <div class="card">
+
+            <label for="tool-select">Select Tool</label>
+
+            <select id="tool-select">
+                <option value="compress">Compress PDF</option>
+                <option value="pdf-to-jpg">PDF to JPG</option>
+                <option value="jpg-to-pdf">JPG to PDF</option>
+                <option value="merge">Merge PDF</option>
+                <option value="split">Split PDF</option>
+            </select>
+
+            <div class="upload-area" id="upload-area">
+                <p>📄 Drag & Drop File Here</p>
+                <p>or</p>
+
+                <input
+                    type="file"
+                    id="file-input"
+                    multiple
+                >
+
+            </div>
+
+            <ul id="file-list"></ul>
+
+            <button id="process-btn">
+                Process File
+            </button>
+
+        </div>
+
+        <div id="result-area"></div>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
+    <script src="https://unpkg.com/pdf-lib"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    
+    <script src="js/ui.js"></script>
+    <script src="js/upload.js"></script>
+    <script src="js/pdfToJpg.js"></script>
+    <script src="js/merge.js"></script>
+    <script src="js/split.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
