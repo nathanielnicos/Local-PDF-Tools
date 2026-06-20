@@ -24,7 +24,5 @@ async function mergePdfs(files, onProgress) {
         );
     }
 
-    onProgress?.("Saving PDF...");
-
     return await mergedPdf.save();
 }

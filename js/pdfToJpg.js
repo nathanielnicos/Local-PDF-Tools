@@ -53,8 +53,6 @@ async function convertPdfToJpg(file, onProgress) {
             );
         });
 
-        onProgress?.("Creating ZIP...");
-
         return await zip.generateAsync({
             type: "blob"
         });

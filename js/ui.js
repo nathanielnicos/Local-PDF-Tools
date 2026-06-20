@@ -10,24 +10,6 @@ function showProgress(progress) {
         `<p>${progress}</p>`;
 }
 
-function showSelectedFiles(files) {
-    resultArea.innerHTML = `
-        <p>
-            Selected Files:
-            ${files.length}
-        </p>
-        `;
-}
-
-function showPdfInfo(file, pageCount) {
-    resultArea.innerHTML = `
-        <h3>PDF Information</h3>
-        <p><strong>Name:</strong> ${file.name}</p>
-        <p><strong>Pages:</strong> ${pageCount}</p>
-        <p><strong>Size:</strong> ${(file.size / 1024 / 1024).toFixed(2)} MB</p>
-    `;
-}
-
 function showFileList(files) {
     const list = document.getElementById("file-list");
     list.innerHTML = "";
@@ -38,6 +20,11 @@ function showFileList(files) {
         const nameSpan = document.createElement("span");
         nameSpan.className = "filename";
         nameSpan.textContent = file.name;
+
+        const sizeSpan = document.createElement("span");
+        sizeSpan.className = "filesize";
+        const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+        sizeSpan.textContent = `${sizeMB} MB`;
 
         const upBtn = document.createElement("button");
         upBtn.textContent = "↑";
@@ -71,6 +58,7 @@ function showFileList(files) {
         btnContainer.appendChild(removeBtn);
 
         li.appendChild(nameSpan);
+        li.appendChild(sizeSpan);
         li.appendChild(btnContainer);
         list.appendChild(li);
     });

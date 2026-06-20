@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local PDF Tools</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <main class="container">
 
         <h1>Local PDF Tools</h1>
+        
         <p class="subtitle">
             Compress and convert PDF files directly on your device.
             No uploads. No tracking.
@@ -21,13 +20,17 @@
 
             <label for="tool-select">Select Tool</label>
 
-            <select id="tool-select">
-                <option value="compress">Compress PDF</option>
-                <option value="pdf-to-jpg">PDF to JPG</option>
-                <option value="jpg-to-pdf">JPG to PDF</option>
-                <option value="merge">Merge PDF</option>
-                <option value="split">Split PDF</option>
-            </select>
+            <div class="tool-container">
+                <select id="tool-select">
+                    <option value="compress">Compress PDF</option>
+                    <option value="pdf-to-jpg">PDF to JPG</option>
+                    <option value="jpg-to-pdf">JPG/JPEG to PDF</option>
+                    <option value="merge">Merge PDF</option>
+                    <option value="split">Split PDF</option>
+                </select>
+
+                <input type="number" id="max-mb-input" min="0.1" step="0.1" placeholder="Max MB" disabled>
+            </div>
 
             <div class="upload-area" id="upload-area">
                 <p>📄 Drag & Drop File Here</p>
@@ -38,7 +41,6 @@
                     id="file-input"
                     multiple
                 >
-
             </div>
 
             <ul id="file-list"></ul>
@@ -62,9 +64,11 @@
     
     <script src="js/ui.js"></script>
     <script src="js/upload.js"></script>
+    <script src="js/compressPdf.js"></script>
     <script src="js/pdfToJpg.js"></script>
-    <script src="js/merge.js"></script>
-    <script src="js/split.js"></script>
+    <script src="js/jpgJpegToPdf.js"></script>
+    <script src="js/mergePdf.js"></script>
+    <script src="js/splitPdf.js"></script>
     <script src="js/main.js"></script>
 
 </body>

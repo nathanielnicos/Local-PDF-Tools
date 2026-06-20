@@ -45,10 +45,33 @@ label {
     font-weight: bold;
 }
 
-select {
+.tool-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#tool-select {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
+    height: 36px;
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+#max-mb-input {
+  width: 80px;
+  height: 36px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#max-mb-input:disabled {
+  background-color: #f0f0f0;
+  color: #888;
+  cursor: not-allowed;
 }
 
 .upload-area {
@@ -81,7 +104,7 @@ select {
 #file-list {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 0px 0px 20px 0px;
   width: 100%;
 }
 
@@ -96,44 +119,39 @@ select {
   border-radius: 4px;
 }
 
-#file-list li span.filename {
+.filename {
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-right: 10px;
 }
 
-#file-list li .buttons {
+.filesize {
+  margin-right: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.buttons {
   display: flex;
   gap: 4px;
 }
 
-#file-list li button {
+.buttons button {
   padding: 2px 6px;
   font-size: 14px;
   cursor: pointer;
   border: 1px solid #ccc;
   background: #fff;
   border-radius: 3px;
+  margin-left: 5px;
 }
 
-#file-list li button:hover {
+.buttons button:hover {
   background: #e6e6e6;
 }
 
-#file-list li .buttons button {
-  padding: 2px 6px;
-  font-size: 14px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 3px;
-}
-
-#file-list li .buttons button:hover {
-  background: #e6e6e6;
-}
-
-#file-list li .buttons button:last-child {
-  color: red; /* tombol X berwarna merah */
+.buttons button:last-child {
+  color: red;
 }
